@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computer Graphics Paint Program</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Computer Graphics Paint</h1>
+        <p>A basic MS Paint-like computer graphics project made with C++ Win32 GDI. It demonstrates raster drawing, colors, geometric shapes, text, history, and bitmap saving.</p>
+    </header>
+
+    <main class="content">
+        <section class="grid">
+            <article class="card">
+                <h2>Drawing tools</h2>
+                <p>Use Pencil for freehand strokes, Line for straight lines, Rectangle and Ellipse for geometric shapes, Text for labels, and Eraser for corrections.</p>
+            </article>
+            <article class="card">
+                <h2>Color selection</h2>
+                <p>The toolbar includes twelve preset colors. Brush size can be changed from 1 to 50 pixels.</p>
+            </article>
+            <article class="card">
+                <h2>Undo and redo</h2>
+                <p>The program keeps up to thirty drawing states, making experimentation safe and simple.</p>
+            </article>
+            <article class="card">
+                <h2>Save functionality</h2>
+                <p>Save the canvas as a standard <code>.bmp</code> bitmap image using the Save BMP button.</p>
+            </article>
+        </section>
+
+        <section class="card" style="margin-top: 18px;">
+            <h2>Build and run</h2>
+            <p>Open <code>Developer Command Prompt for Visual Studio</code> in this folder and run:</p>
+            <pre>cl /EHsc /DUNICODE /D_UNICODE main.cpp user32.lib gdi32.lib comdlg32.lib /link /SUBSYSTEM:WINDOWS</pre>
+            <p>Then launch <code>main.exe</code>. MinGW users can use:</p>
+            <pre>g++ -std=c++17 -municode -mwindows main.cpp -o paint.exe -luser32 -lgdi32 -lcomdlg32</pre>
+        </section>
+
+        <section class="card" style="margin-top: 18px;">
+            <h2>CGR concepts demonstrated</h2>
+            <p>The application uses the Win32 GDI raster pipeline: device contexts, pens, brushes, bitmaps, pixel-compatible memory surfaces, line rasterization, ellipse and rectangle primitives, and bitmap file output. These are the core concepts normally studied in Computer Graphics.</p>
+        </section>
+    </main>
+
+    <footer>Computer Graphics Paint Program &mdash; CSE Diploma Project</footer>
+</body>
+</html>
